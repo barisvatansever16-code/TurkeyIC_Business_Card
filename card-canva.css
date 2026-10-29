@@ -83,16 +83,16 @@ html, body {
 
 .name {
   margin: 0;
-  font-family: "Great Vibes", "Snell Roundhand", "Segoe Script", cursive;
-  font-weight: 400;
-  font-size: 6.4mm;
+  font-family: "Outfit", "Avenir Next", sans-serif;
+  font-weight: 600;
+  font-size: 5.4mm;
   line-height: 1.05;
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
 
 .role {
-  margin: 0.5mm 0 0;
+  margin: 1mm 0 0;
   font-size: 2.15mm;
   font-weight: 400;
   color: var(--soft);
@@ -197,7 +197,7 @@ html, body {
 }
 
 .services-title {
-  margin: 2mm 0 0.7mm;
+  margin: 1.8mm 0 0.35mm;
   font-size: 1.8mm;
   font-weight: 600;
   letter-spacing: 0.18em;
