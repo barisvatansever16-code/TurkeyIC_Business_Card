@@ -77,13 +77,13 @@ html, body {
 .identity {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   min-height: 0;
   height: 100%;
 }
 
 .identity-top {
-  margin-top: 3.2mm;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .name {
@@ -112,7 +112,7 @@ html, body {
 
 .contacts {
   list-style: none;
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 0.4mm;
   padding: 0;
   display: grid;
