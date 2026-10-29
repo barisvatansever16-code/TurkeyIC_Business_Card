@@ -1,0 +1,261 @@
+:root {
+  --ink: #111111;
+  --soft: #555555;
+  --muted: #8a8a8a;
+  --panel: #f3f3f3;
+  --accent: #b8943a;
+  --paper: #ffffff;
+  --card-w: 85mm;
+  --card-h: 55mm;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #dcdcdc;
+  color: var(--ink);
+  font-family: "Outfit", "Avenir Next", sans-serif;
+}
+
+.stage {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 2.2rem 1.2rem 3rem;
+}
+
+.hint {
+  margin: 0 0 1.2rem;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.sheet {
+  display: grid;
+  gap: 1.6rem;
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  width: var(--card-w);
+  height: var(--card-h);
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* Canva-like split: content | QR panel */
+.front {
+  display: grid;
+  grid-template-columns: 1.45fr 0.9fr;
+}
+
+.front-main {
+  padding: 5mm 4.5mm 4.5mm 5mm;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+}
+
+.brand {
+  width: 34mm;
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+.name {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 6.4mm;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.role {
+  margin: 1.3mm 0 0;
+  font-size: 2.15mm;
+  font-weight: 400;
+  color: var(--soft);
+}
+
+.rule {
+  width: 12mm;
+  height: 0.35mm;
+  margin: 2mm 0;
+  background: var(--accent);
+}
+
+.contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.15mm;
+}
+
+.contacts li {
+  display: grid;
+  grid-template-columns: 10.5mm 1fr;
+  gap: 1.2mm;
+  font-size: 2.15mm;
+}
+
+.contacts .label {
+  font-size: 1.55mm;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contacts .value {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.front-side {
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5mm;
+  padding: 3mm;
+  border-left: 0.8mm solid var(--accent);
+}
+
+.qr-frame {
+  width: 20mm;
+  height: 20mm;
+  padding: 1.2mm;
+  background: #fff;
+}
+
+.qr-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-caption {
+  margin: 0;
+  font-size: 1.4mm;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Back — Canva consultant style */
+.back {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 4.5mm 5mm 4mm;
+}
+
+.back-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 2mm;
+  border-bottom: 0.35mm solid rgba(0, 0, 0, 0.12);
+}
+
+.back-head .mark {
+  width: 34mm;
+  display: block;
+}
+
+.back-head .tag {
+  margin: 0;
+  font-size: 1.6mm;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.services-title {
+  margin: 2.2mm 0 1.5mm;
+  font-size: 1.8mm;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4mm;
+  row-gap: 1.5mm;
+}
+
+.services li {
+  display: flex;
+  gap: 1.4mm;
+  align-items: baseline;
+  font-size: 2.4mm;
+  font-weight: 500;
+  padding-bottom: 1mm;
+  border-bottom: 0.2mm solid rgba(0, 0, 0, 0.1);
+}
+
+.services span {
+  font-size: 1.55mm;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.back-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2mm;
+  padding-top: 1.5mm;
+  border-top: 0.35mm solid rgba(0, 0, 0, 0.12);
+  font-size: 1.75mm;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+@media print {
+  @page { size: 85mm 55mm; margin: 0; }
+  html, body { background: none; }
+  .stage { margin: 0; padding: 0; }
+  .hint { display: none !important; }
+  .sheet { gap: 0; }
+  .card {
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+  .card:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
