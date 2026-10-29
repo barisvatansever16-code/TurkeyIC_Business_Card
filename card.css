@@ -84,11 +84,11 @@ html, body {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
-  padding: 5.2mm 5.8mm 4.6mm;
+  padding: 4.6mm 5.2mm 4mm;
 }
 
 .brand {
-  width: 38mm;
+  width: 36mm;
 }
 
 .brand img {
@@ -100,27 +100,28 @@ html, body {
 
 .front-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.9fr;
-  gap: 2.5mm;
-  align-items: stretch;
-  margin-top: 1.2mm;
+  grid-template-columns: 1.2fr 0.95fr;
+  gap: 2mm;
+  align-items: center;
+  margin-top: 0.6mm;
+  min-height: 0;
 }
 
 .eyebrow {
   margin: 0;
-  font-size: 1.7mm;
+  font-size: 1.55mm;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
 .identity h1 {
-  margin: 0.7mm 0 0;
+  margin: 0.5mm 0 0;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 600;
-  font-size: 7.6mm;
-  line-height: 0.9;
+  font-size: 6.8mm;
+  line-height: 0.92;
   letter-spacing: -0.01em;
   color: #fff8e8;
 }
@@ -130,17 +131,17 @@ html, body {
 }
 
 .role {
-  margin: 1.1mm 0 0;
-  font-size: 2.35mm;
+  margin: 0.9mm 0 0;
+  font-size: 2.2mm;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--muted);
 }
 
 .gold-rule {
-  width: 14mm;
+  width: 18mm;
   height: 0.35mm;
-  margin: 2mm 0 2.1mm;
+  margin: 1.5mm 0 1.6mm;
   background: linear-gradient(90deg, var(--gold), transparent);
 }
 
@@ -149,26 +150,26 @@ html, body {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1.15mm;
+  gap: 0.95mm;
 }
 
 .contacts li {
   display: grid;
-  grid-template-columns: 11mm 1fr;
-  gap: 1.2mm;
+  grid-template-columns: 10.5mm 1fr;
+  gap: 1mm;
   align-items: baseline;
 }
 
 .contacts .label {
-  font-size: 1.75mm;
+  font-size: 1.65mm;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
 }
 
 .contacts .value {
-  font-size: 2.25mm;
+  font-size: 2.15mm;
   font-weight: 400;
   color: rgba(255, 248, 232, 0.92);
 }
@@ -177,9 +178,13 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1.2mm;
-  padding-bottom: 0.4mm;
+  justify-content: center;
+  gap: 1.3mm;
+  align-self: stretch;
+  background: rgba(212, 175, 55, 0.06);
+  border: 0.25mm solid rgba(212, 175, 55, 0.28);
+  border-radius: 1mm;
+  padding: 2mm 1.5mm 1.6mm;
 }
 
 .qr-medal {
@@ -239,50 +244,50 @@ html, body {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 4.8mm 5.8mm 4.2mm;
+  padding: 4.2mm 5.2mm 3.6mm;
 }
 
 .back-head {
   display: grid;
   justify-items: center;
-  gap: 0.8mm;
+  gap: 0.5mm;
 }
 
 .back-head .mark {
-  width: 46mm;
+  width: 44mm;
   height: auto;
   display: block;
 }
 
 .back-kicker {
   margin: 0;
-  font-size: 1.85mm;
+  font-size: 1.75mm;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold-deep);
 }
 
 .services {
   list-style: none;
-  margin: 1.4mm 0 0;
-  padding: 0 1mm;
+  margin: 0.8mm 0 0;
+  padding: 0 0.5mm;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 4mm;
-  row-gap: 1.5mm;
+  column-gap: 3.5mm;
+  row-gap: 1.7mm;
   align-content: center;
 }
 
 .services li {
   display: flex;
   align-items: baseline;
-  gap: 1.5mm;
-  font-size: 2.55mm;
+  gap: 1.4mm;
+  font-size: 2.6mm;
   font-weight: 500;
   color: var(--ink);
   border-bottom: 0.2mm solid rgba(184, 148, 58, 0.28);
-  padding-bottom: 1mm;
+  padding-bottom: 1.15mm;
 }
 
 .services span {
