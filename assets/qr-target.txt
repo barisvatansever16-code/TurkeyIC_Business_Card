@@ -1,1 +1,2 @@
-VCARD direct — Ferruh Dede (add to contacts)
+https://barisvatansever16-code.github.io/TurkeyIC_Business_Card/contact/ferruh-dede.vcf
+# vCard file with embedded photo → Add to contacts
