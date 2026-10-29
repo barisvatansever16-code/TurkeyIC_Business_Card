@@ -1,2 +1,1 @@
-VCARD direct + PHOTO URI (not a webpage URL)
-https://barisvatansever16-code.github.io/TurkeyIC_Business_Card/contact/ferruh-photo.jpg
+VCARD direct — Ferruh Dede (no TITLE)
