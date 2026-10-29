@@ -1,0 +1,233 @@
+/* Turkey IC business card — v2 (pattern / QR split) */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600&display=swap");
+
+:root {
+  --card-w: 85mm;
+  --card-h: 55mm;
+  --cream: #f5efe6;
+  --ink: #5c1822;
+  --ink-soft: #8a4a52;
+  --muted: #9a8b84;
+  --line: #5c1822;
+  --pattern: rgba(176, 74, 82, 0.11);
+  --cyan: #1aa6c1;
+}
+
+* { box-sizing: border-box; }
+
+.card {
+  width: var(--card-w);
+  height: var(--card-h);
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Sora", sans-serif;
+  position: relative;
+  overflow: hidden;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/turkeyic-pattern-tile.png");
+  background-size: 11mm 11mm;
+  background-repeat: repeat;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* —— Front —— */
+.front {
+  display: grid;
+  grid-template-columns: 0.92fr 1.28fr;
+}
+
+.front-qr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6mm;
+  padding: 3mm;
+  border-right: 0.55mm solid var(--line);
+}
+
+.front-qr .pattern { opacity: 1; }
+
+.qr-frame {
+  position: relative;
+  z-index: 1;
+  width: 27mm;
+  height: 27mm;
+  padding: 1.2mm;
+  background: #fff;
+  box-shadow: 0 0.4mm 1.6mm rgba(92, 24, 34, 0.08);
+}
+
+.qr-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-caption {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 1.45mm;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.front-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5.5mm 5.5mm 4.5mm 5mm;
+  background: var(--cream);
+}
+
+.front-info .pattern {
+  opacity: 0.35;
+}
+
+.identity {
+  position: relative;
+  z-index: 1;
+}
+
+.name {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 6.4mm;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.name .given {
+  display: block;
+  font-weight: 500;
+  font-size: 5.2mm;
+  letter-spacing: 0.02em;
+}
+
+.name .family {
+  display: block;
+  font-weight: 700;
+  font-size: 7.2mm;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.role {
+  margin: 1.8mm 0 0;
+  font-size: 2.05mm;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.rule {
+  width: 10mm;
+  height: 0.28mm;
+  margin-top: 2.2mm;
+  background: var(--ink);
+  opacity: 0.55;
+}
+
+.contacts {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.35mm;
+  align-self: end;
+}
+
+.contacts li {
+  display: grid;
+  grid-template-columns: 1fr 3.2mm;
+  gap: 1.6mm;
+  align-items: center;
+  justify-items: end;
+  font-size: 2.05mm;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.contacts .ico {
+  width: 3mm;
+  height: 3mm;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.contacts svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* —— Back —— */
+.back {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 0;
+}
+
+.back .pattern { opacity: 0.85; }
+
+.svc-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8mm;
+  padding: 2.6mm 5mm;
+  font-size: 1.9mm;
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  color: #f7f1ea;
+  background: var(--ink);
+}
+
+.svc-row span {
+  white-space: nowrap;
+}
+
+.svc-row .dot {
+  width: 0.65mm;
+  height: 0.65mm;
+  border-radius: 50%;
+  background: #f7f1ea;
+  opacity: 0.45;
+  flex: 0 0 auto;
+}
+
+.back-hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3mm 7mm;
+}
+
+.back-hero img {
+  width: 52mm;
+  height: auto;
+  display: block;
+}
