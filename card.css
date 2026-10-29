@@ -101,13 +101,14 @@ html, body {
 
 .identity h1 {
   margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
   font-weight: 600;
-  font-size: 6.2mm;
+  font-size: 6.4mm;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   white-space: nowrap;
   color: var(--ink);
+  font-optical-sizing: auto;
 }
 
 .role {
@@ -205,7 +206,6 @@ html, body {
 .back-head {
   display: grid;
   justify-items: center;
-  gap: 0.5mm;
 }
 
 .back-head .mark {
@@ -214,9 +214,16 @@ html, body {
   display: block;
 }
 
-.back-kicker {
-  margin: 0;
-  font-size: 1.75mm;
+.services-block {
+  display: grid;
+  align-content: center;
+  min-height: 0;
+}
+
+.services-title {
+  margin: 0 0 1.6mm;
+  padding: 0 0.5mm;
+  font-size: 1.85mm;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -225,7 +232,7 @@ html, body {
 
 .services {
   list-style: none;
-  margin: 0.8mm 0 0;
+  margin: 0;
   padding: 0 0.5mm;
   display: grid;
   grid-template-columns: 1fr 1fr;
