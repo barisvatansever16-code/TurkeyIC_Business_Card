@@ -54,7 +54,7 @@ html, body {
 /* Canva-like split: content | QR panel */
 .front {
   display: grid;
-  grid-template-columns: 1.45fr 0.9fr;
+  grid-template-columns: 1.25fr 1.05fr;
 }
 
 .front-main {
@@ -151,9 +151,9 @@ html, body {
 }
 
 .qr-frame {
-  width: 22mm;
-  height: 22mm;
-  padding: 1.2mm;
+  width: 26mm;
+  height: 26mm;
+  padding: 1.1mm;
   background: #fff;
 }
 
