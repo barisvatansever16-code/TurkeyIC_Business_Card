@@ -195,6 +195,17 @@
   background: #fff;
 }
 
+.back > .pattern {
+  opacity: 1;
+}
+
+.back-head,
+.services-block,
+.back-foot {
+  position: relative;
+  z-index: 1;
+}
+
 .back-head {
   display: flex;
   align-items: flex-end;
