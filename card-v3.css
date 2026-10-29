@@ -197,9 +197,9 @@
 
 .back-watermark {
   position: absolute;
-  top: 2.4mm;
-  right: 3.2mm;
-  width: 9mm;
+  top: 2mm;
+  right: 2.8mm;
+  width: 12.5mm;
   height: auto;
   opacity: 0.14;
   pointer-events: none;
