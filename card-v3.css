@@ -195,8 +195,15 @@
   background: #fff;
 }
 
-.back > .pattern {
-  opacity: 1;
+.back-watermark {
+  position: absolute;
+  top: 3.2mm;
+  right: 4mm;
+  width: 16mm;
+  height: auto;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .back-head,
