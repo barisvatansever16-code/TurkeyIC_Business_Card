@@ -151,9 +151,9 @@ html, body {
 }
 
 .qr-frame {
-  width: 26mm;
-  height: 26mm;
-  padding: 1.1mm;
+  width: 28mm;
+  height: 28mm;
+  padding: 1mm;
   background: #fff;
 }
 
