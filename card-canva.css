@@ -77,7 +77,8 @@ html, body {
 .identity {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 1.5mm;
   min-height: 0;
 }
 
@@ -101,16 +102,16 @@ html, body {
 .rule {
   width: 12mm;
   height: 0.35mm;
-  margin: 1.6mm 0;
+  margin: 1.5mm 0 0;
   background: var(--accent);
 }
 
 .contacts {
   list-style: none;
-  margin: 0;
+  margin: 2.4mm 0 0;
   padding: 0;
   display: grid;
-  gap: 1.15mm;
+  gap: 0.55mm;
 }
 
 .contacts li {
@@ -178,7 +179,8 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 2mm;
+  gap: 3mm;
+  padding-bottom: 1.6mm;
   border-bottom: 0.35mm solid rgba(0, 0, 0, 0.12);
 }
 
@@ -187,22 +189,18 @@ html, body {
   display: block;
 }
 
-.back-head .tag {
+.back-head .services-title {
   margin: 0;
-  font-size: 1.6mm;
+  font-size: 1.7mm;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 600;
+  color: var(--ink);
+  text-align: right;
 }
 
-.services-title {
-  margin: 1.8mm 0 0.35mm;
-  font-size: 1.8mm;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink);
+.services-block {
+  margin-top: 2.4mm;
 }
 
 .services {
