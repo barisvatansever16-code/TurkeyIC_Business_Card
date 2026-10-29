@@ -61,9 +61,8 @@
   z-index: 1;
   width: 27mm;
   height: 27mm;
-  padding: 1.2mm;
-  background: #fff;
-  box-shadow: 0 0.4mm 1.6mm rgba(92, 24, 34, 0.08);
+  padding: 0.8mm;
+  background: var(--cream);
 }
 
 .qr-frame img {
@@ -89,8 +88,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 5.5mm 5.5mm 4.5mm 5mm;
   background: var(--cream);
+  text-align: right;
 }
 
 .front-info .pattern {
@@ -100,35 +101,38 @@
 .identity {
   position: relative;
   z-index: 1;
+  width: 100%;
+  text-align: right;
 }
 
 .name {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  font-size: 6.4mm;
-  line-height: 0.95;
-  letter-spacing: 0.01em;
+  font-size: 5.2mm;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
   color: var(--ink);
+  white-space: nowrap;
+}
+
+.name .given,
+.name .family {
+  display: inline;
+  font-size: inherit;
+  letter-spacing: inherit;
 }
 
 .name .given {
-  display: block;
   font-weight: 500;
-  font-size: 5.2mm;
-  letter-spacing: 0.02em;
 }
 
 .name .family {
-  display: block;
   font-weight: 700;
-  font-size: 7.2mm;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .role {
-  margin: 1.8mm 0 0;
+  margin: 1.6mm 0 0;
   font-size: 2.05mm;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -138,7 +142,7 @@
 .rule {
   width: 10mm;
   height: 0.28mm;
-  margin-top: 2.2mm;
+  margin: 2.2mm 0 0 auto;
   background: var(--ink);
   opacity: 0.55;
 }
@@ -194,11 +198,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.8mm;
-  padding: 2.6mm 5mm;
-  font-size: 1.9mm;
-  font-weight: 500;
-  letter-spacing: 0.045em;
+  gap: 1.2mm;
+  padding: 3.6mm 3.6mm;
+  font-size: 2.35mm;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: #f7f1ea;
   background: var(--ink);
 }
@@ -208,11 +212,11 @@
 }
 
 .svc-row .dot {
-  width: 0.65mm;
-  height: 0.65mm;
+  width: 0.75mm;
+  height: 0.75mm;
   border-radius: 50%;
   background: #f7f1ea;
-  opacity: 0.45;
+  opacity: 0.5;
   flex: 0 0 auto;
 }
 
