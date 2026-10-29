@@ -1,12 +1,12 @@
 BEGIN:VCARD
 VERSION:3.0
-N:DEDE;Ferruh;;;
-FN:Ferruh DEDE
+N:Dede;Ferruh;;;
+FN:Ferruh Dede
 ORG:Turkey IC
 TITLE:Senior Immigration Consultant
-TEL;TYPE=WORK:+905050901665
-EMAIL;TYPE=WORK:turkeyic@turkeyic.com
-ADR;TYPE=WORK:;;3. Meltem Sk. 25B;Osmangazi;Bursa;16150;Türkiye
+TEL;TYPE=CELL:+905050901665
+EMAIL:turkeyic@turkeyic.com
+ADR:;;3. Meltem Sk. 25B;Osmangazi;Bursa;16150;Türkiye
 URL:http://www.turkeyic.com
-PHOTO;VALUE=URI:https://static.wixstatic.com/media/22563f_1559aca8bc6349958e27be795b6fdc6a~mv2.jpg
+PHOTO;VALUE=URI;TYPE=JPEG:https://barisvatansever16-code.github.io/TurkeyIC_Business_Card/contact/ferruh-photo.jpg
 END:VCARD
