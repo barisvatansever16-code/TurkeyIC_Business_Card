@@ -115,10 +115,6 @@
   text-align: right;
 }
 
-.front-info .pattern {
-  opacity: 0.35;
-}
-
 .identity {
   position: relative;
   z-index: 1;
