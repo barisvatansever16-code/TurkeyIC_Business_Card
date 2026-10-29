@@ -183,19 +183,29 @@ html, body {
 }
 
 .qr-medal {
-  padding: 1.5mm;
-  background:
-    linear-gradient(145deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.08));
-  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  position: relative;
+  padding: 2.2mm;
+  background: linear-gradient(145deg, #e6c76a, #9a7420 55%, #e6c76a);
+  border-radius: 1.2mm;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.qr-medal::before {
+  content: "";
+  position: absolute;
+  inset: 0.55mm;
+  border: 0.25mm solid rgba(15, 28, 46, 0.35);
+  border-radius: 0.7mm;
+  pointer-events: none;
 }
 
 .qr-frame {
-  width: 20mm;
-  height: 20mm;
-  padding: 1.2mm;
+  position: relative;
+  z-index: 1;
+  width: 21mm;
+  height: 21mm;
+  padding: 1.4mm;
   background: #fff;
-  border: 0.35mm solid var(--gold);
-  box-shadow: 0 0 0 0.7mm rgba(15, 28, 46, 0.35);
 }
 
 .qr-frame img {
