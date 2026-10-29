@@ -58,11 +58,32 @@
   border-right: 0.55mm solid var(--line);
 }
 
-.front-qr .pattern {
-  opacity: 1;
-  /* Keep marks fully inside the QR panel */
-  inset: 2.2mm;
-  border-radius: 0;
+.mark-field {
+  position: absolute;
+  inset: 2.4mm 2mm;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: center;
+  pointer-events: none;
+}
+
+.mark-field img {
+  width: 7.2mm;
+  height: auto;
+  opacity: 0.13;
+  display: block;
+  object-fit: contain;
+}
+
+.mark-field-soft {
+  inset: 3mm 3.5mm 3mm 2.5mm;
+}
+
+.mark-field-soft img {
+  opacity: 0.07;
+  width: 6.4mm;
 }
 
 .qr-frame {
