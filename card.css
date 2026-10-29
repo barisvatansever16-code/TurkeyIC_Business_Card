@@ -1,10 +1,10 @@
 :root {
-  --ink: #141414;
-  --soft: #5c5c5c;
-  --quiet: #8a8a8a;
-  --line: rgba(20, 20, 20, 0.12);
-  --paper: #ffffff;
-  --warm: #faf9f7;
+  --ink: #1c1c1c;
+  --soft: #4a4a4a;
+  --quiet: #6e6e6e;
+  --line: rgba(28, 28, 28, 0.1);
+  --paper: #fffcf8;
+  --warm: #f7f3ec;
   --card-w: 85mm;
   --card-h: 55mm;
 }
@@ -130,15 +130,15 @@ html, body {
 }
 
 .contacts .label {
-  font-size: 1.85mm;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-size: 1.9mm;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--quiet);
+  color: #7a7a7a;
 }
 
 .contacts .value {
-  font-size: 2.25mm;
+  font-size: 2.3mm;
   font-weight: 400;
   color: var(--ink);
   letter-spacing: 0.01em;
