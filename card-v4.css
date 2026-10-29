@@ -1,0 +1,282 @@
+/* Turkey IC business card — v4 (complete mark pattern) */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@400;500;600&display=swap");
+
+:root {
+  --card-w: 85mm;
+  --card-h: 55mm;
+  --cream: #ffffff;
+  --ink: #5c1822;
+  --ink-soft: #8a4a52;
+  --muted: #9aa3ad;
+  --line: #5c1822;
+  --pattern: rgba(176, 74, 82, 0.10);
+  --cyan: #1aa6c1;
+  --svc-fg: #ffffff;
+  --accent: #a67c52;
+  --rule: rgba(92, 24, 34, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+.card {
+  width: var(--card-w);
+  height: var(--card-h);
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Sora", sans-serif;
+  position: relative;
+  overflow: hidden;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/turkeyic-pattern-tile-v4.png");
+  background-size: 13mm 13mm;
+  background-repeat: round;
+  background-position: center;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* —— Front —— */
+.front {
+  display: grid;
+  grid-template-columns: 0.92fr 1.28fr;
+}
+
+.front-qr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6mm;
+  padding: 3mm;
+  border-right: 0.55mm solid var(--line);
+}
+
+.front-qr .pattern {
+  opacity: 1;
+  /* Keep marks fully inside the QR panel */
+  inset: 2.2mm;
+  border-radius: 0;
+}
+
+.qr-frame {
+  position: relative;
+  z-index: 1;
+  width: 27mm;
+  height: 27mm;
+  padding: 0.8mm;
+  background: var(--cream);
+}
+
+.qr-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qr-caption {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: 1.45mm;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.front-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5.5mm 5.5mm 4.5mm 5mm;
+  background: var(--cream);
+  text-align: right;
+}
+
+.front-info .pattern {
+  opacity: 0.35;
+}
+
+.identity {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: right;
+}
+
+.name {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  line-height: 0.92;
+  color: var(--ink);
+  text-align: right;
+}
+
+.name .given,
+.name .family {
+  display: block;
+}
+
+.name .given {
+  font-weight: 500;
+  font-size: 6.4mm;
+  letter-spacing: 0.015em;
+}
+
+.name .family {
+  font-weight: 700;
+  font-size: 8.2mm;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.role {
+  margin: 2mm 0 0;
+  font-size: 2.05mm;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.rule {
+  width: 10mm;
+  height: 0.28mm;
+  margin: 2.2mm 0 0 auto;
+  background: var(--ink);
+  opacity: 0.55;
+}
+
+.contacts {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.35mm;
+  align-self: end;
+}
+
+.contacts li {
+  display: grid;
+  grid-template-columns: 1fr 3.2mm;
+  gap: 1.6mm;
+  align-items: center;
+  justify-items: end;
+  font-size: 2.05mm;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.contacts .ico {
+  width: 3mm;
+  height: 3mm;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.contacts svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* —— Back (list layout, front palette) —— */
+.back {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 4.5mm 5mm 4mm;
+  background: #fff;
+}
+
+.back-watermark {
+  position: absolute;
+  top: 2mm;
+  right: 2.8mm;
+  width: 12.5mm;
+  height: auto;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+  object-fit: contain;
+}
+
+.back-head,
+.services-block,
+.back-foot {
+  position: relative;
+  z-index: 1;
+}
+
+.back-head {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1.8mm;
+  border-bottom: 0.35mm solid var(--rule);
+}
+
+.back-head .mark {
+  width: 36mm;
+  display: block;
+}
+
+.services-block {
+  display: flex;
+  align-items: center;
+  margin-top: 0.4mm;
+}
+
+.services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4.5mm;
+  row-gap: 1.35mm;
+}
+
+.services li {
+  display: flex;
+  gap: 1.5mm;
+  align-items: baseline;
+  font-size: 2.45mm;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 1.15mm 0 1.05mm;
+  border-bottom: 0.22mm solid var(--rule);
+}
+
+.services span {
+  font-size: 1.6mm;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  flex: 0 0 auto;
+}
+
+.back-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2mm;
+  padding-top: 1.6mm;
+  border-top: 0.35mm solid var(--rule);
+  font-size: 1.75mm;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
