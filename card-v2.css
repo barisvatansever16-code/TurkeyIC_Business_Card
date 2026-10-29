@@ -4,13 +4,14 @@
 :root {
   --card-w: 85mm;
   --card-h: 55mm;
-  --cream: #f5efe6;
+  --cream: #e8edf1;
   --ink: #5c1822;
-  --ink-soft: #8a4a52;
-  --muted: #9a8b84;
+  --ink-soft: #7a4550;
+  --muted: #8a939c;
   --line: #5c1822;
-  --pattern: rgba(176, 74, 82, 0.11);
+  --pattern: rgba(140, 70, 80, 0.1);
   --cyan: #1aa6c1;
+  --svc-fg: #eef2f5;
 }
 
 * { box-sizing: border-box; }
@@ -109,30 +110,31 @@
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  font-size: 5.2mm;
-  line-height: 1.05;
-  letter-spacing: 0.02em;
+  line-height: 0.92;
   color: var(--ink);
-  white-space: nowrap;
+  text-align: right;
 }
 
 .name .given,
 .name .family {
-  display: inline;
-  font-size: inherit;
-  letter-spacing: inherit;
+  display: block;
 }
 
 .name .given {
   font-weight: 500;
+  font-size: 6.4mm;
+  letter-spacing: 0.015em;
 }
 
 .name .family {
   font-weight: 700;
+  font-size: 8.2mm;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .role {
-  margin: 1.6mm 0 0;
+  margin: 2mm 0 0;
   font-size: 2.05mm;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -196,14 +198,14 @@
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 1.2mm;
-  padding: 3.6mm 3.6mm;
+  gap: 2.2mm;
+  padding: 3.6mm 5mm;
   font-size: 2.35mm;
   font-weight: 600;
   letter-spacing: 0.01em;
-  color: #f7f1ea;
+  color: var(--svc-fg);
   background: var(--ink);
 }
 
@@ -215,7 +217,7 @@
   width: 0.75mm;
   height: 0.75mm;
   border-radius: 50%;
-  background: #f7f1ea;
+  background: var(--svc-fg);
   opacity: 0.5;
   flex: 0 0 auto;
 }
