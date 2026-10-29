@@ -4,14 +4,14 @@
 :root {
   --card-w: 85mm;
   --card-h: 55mm;
-  --cream: #e8edf1;
+  --cream: #f5efe6;
   --ink: #5c1822;
-  --ink-soft: #7a4550;
-  --muted: #8a939c;
+  --ink-soft: #8a4a52;
+  --muted: #9a8b84;
   --line: #5c1822;
-  --pattern: rgba(140, 70, 80, 0.1);
+  --pattern: rgba(176, 74, 82, 0.11);
   --cyan: #1aa6c1;
-  --svc-fg: #eef2f5;
+  --svc-fg: #f7f1ea;
 }
 
 * { box-sizing: border-box; }
@@ -200,26 +200,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.2mm;
-  padding: 3.6mm 5mm;
-  font-size: 2.35mm;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3.8mm 4.5mm;
   color: var(--svc-fg);
   background: var(--ink);
 }
 
-.svc-row span {
+.svc-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1mm;
+  max-width: 100%;
+  font-size: 1.7mm;
+  font-weight: 600;
+  letter-spacing: 0;
   white-space: nowrap;
 }
 
-.svc-row .dot {
-  width: 0.75mm;
-  height: 0.75mm;
+.svc-inner span {
+  flex: 0 0 auto;
+}
+
+.svc-inner span:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 0.6mm;
+  height: 0.6mm;
+  margin-left: 1.1mm;
   border-radius: 50%;
   background: var(--svc-fg);
-  opacity: 0.5;
-  flex: 0 0 auto;
+  opacity: 0.55;
+  vertical-align: middle;
+  transform: translateY(-0.08mm);
 }
 
 .back-hero {
