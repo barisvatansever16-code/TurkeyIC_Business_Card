@@ -101,14 +101,13 @@ html, body {
 
 .identity h1 {
   margin: 0;
-  font-family: "Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
   font-weight: 600;
-  font-size: 6.4mm;
-  line-height: 1;
-  letter-spacing: 0.02em;
+  font-size: 5.6mm;
+  line-height: 1.05;
+  letter-spacing: 0.08em;
   white-space: nowrap;
   color: var(--ink);
-  font-optical-sizing: auto;
 }
 
 .role {
