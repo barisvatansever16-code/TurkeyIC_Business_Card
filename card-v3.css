@@ -12,6 +12,8 @@
   --pattern: rgba(176, 74, 82, 0.10);
   --cyan: #1aa6c1;
   --svc-fg: #ffffff;
+  --accent: #a67c52;
+  --rule: rgba(92, 24, 34, 0.12);
 }
 
 * { box-sizing: border-box; }
@@ -185,69 +187,71 @@
   height: 100%;
 }
 
-/* —— Back —— */
+/* —— Back (list layout, front palette) —— */
 .back {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  padding: 4.5mm 5mm 4mm;
+  background: #fff;
+}
+
+.back-head {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1.8mm;
+  border-bottom: 0.35mm solid var(--rule);
+}
+
+.back-head .mark {
+  width: 36mm;
+  display: block;
+}
+
+.services-block {
+  display: flex;
+  align-items: center;
+  margin-top: 0.4mm;
+}
+
+.services {
+  list-style: none;
+  margin: 0;
   padding: 0;
-}
-
-.back .pattern { opacity: 0.85; }
-
-.svc-row {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  box-sizing: border-box;
-  padding: 4.2mm 3.4mm;
-  color: var(--svc-fg);
-  background: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4.5mm;
+  row-gap: 1.35mm;
 }
 
-.svc-inner {
+.services li {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.05mm;
-  max-width: 100%;
-  font-size: 2.2mm;
+  gap: 1.5mm;
+  align-items: baseline;
+  font-size: 2.45mm;
   font-weight: 600;
-  letter-spacing: 0;
-  white-space: nowrap;
+  color: var(--ink);
+  padding: 1.15mm 0 1.05mm;
+  border-bottom: 0.22mm solid var(--rule);
 }
 
-.svc-inner span {
+.services span {
+  font-size: 1.6mm;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
   flex: 0 0 auto;
 }
 
-.svc-inner span:not(:last-child)::after {
-  content: "";
-  display: inline-block;
-  width: 0.6mm;
-  height: 0.6mm;
-  margin-left: 1.05mm;
-  border-radius: 50%;
-  background: var(--svc-fg);
-  opacity: 0.55;
-  vertical-align: middle;
-  transform: translateY(-0.08mm);
-}
-
-.back-hero {
-  position: relative;
-  z-index: 1;
+.back-foot {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding: 3mm 7mm;
-}
-
-.back-hero img {
-  width: 48mm;
-  height: auto;
-  display: block;
+  margin-top: 1.2mm;
+  padding-top: 1.6mm;
+  border-top: 0.35mm solid var(--rule);
+  font-size: 1.75mm;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.04em;
 }
