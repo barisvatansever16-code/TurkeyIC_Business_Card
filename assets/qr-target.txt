@@ -1,1 +1,1 @@
-VCARD direct + PNG PHOTO + PRODID modules=109
+VCARD direct + JPEG PHOTO modules=113
