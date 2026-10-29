@@ -5,114 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ferruh Dede</title>
   <meta name="description" content="Ferruh Dede — Turkey IC">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #eceff3;
-      --card: #ffffff;
-      --ink: #111827;
-      --muted: #9aa3af;
-      --link: #1b6b4a;
-    }
+    :root { --bg:#f3f5f7; --ink:#111827; --muted:#8b95a5; --green:#0f6b4c; }
     * { box-sizing: border-box; }
     html, body {
-      margin: 0;
-      min-height: 100%;
-      background: var(--bg);
-      color: var(--ink);
+      margin: 0; min-height: 100%;
+      background: var(--bg); color: var(--ink);
       font-family: "Manrope", system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
     .wrap {
-      max-width: 420px;
-      margin: 0 auto;
-      padding: 2.25rem 1.15rem 3rem;
-      text-align: center;
+      max-width: 420px; margin: 0 auto;
+      padding: 2.5rem 1.2rem 3rem; text-align: center;
     }
     .avatar {
-      width: 124px;
-      height: 124px;
-      margin: 0 auto 1rem;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #fff;
-      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.14);
+      width: 168px; height: 168px; margin: 0 auto 1.1rem;
+      border-radius: 50%; object-fit: cover; background: #fff;
+      box-shadow: 0 14px 36px rgba(17,24,39,.16);
     }
-    h1 {
-      margin: 0;
-      font-size: 1.7rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    .title {
-      margin: 0.35rem 0 1.25rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-weight: 500;
-    }
-    .stack { display: grid; gap: 0.7rem; text-align: left; }
+    h1 { margin: 0; font-size: 1.85rem; font-weight: 700; letter-spacing: -0.02em; }
+    .org { margin: .4rem 0 1.5rem; color: var(--muted); font-size: .95rem; font-weight: 500; }
+    .stack { display: grid; gap: .7rem; text-align: left; }
     .row {
-      background: var(--card);
-      border-radius: 14px;
-      padding: 0.85rem 1rem;
+      background: #fff; border-radius: 14px; padding: .9rem 1rem;
     }
-    .row .k {
-      display: block;
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-bottom: 0.2rem;
-      font-weight: 500;
-    }
+    .row .k { display:block; font-size:.72rem; color:var(--muted); margin-bottom:.2rem; font-weight:500; }
     .row .v {
-      color: var(--link);
-      font-size: 1.02rem;
-      font-weight: 600;
-      text-decoration: none;
-      word-break: break-word;
-      white-space: pre-line;
-      line-height: 1.35;
+      color: var(--green); font-size: 1.02rem; font-weight: 600;
+      text-decoration: none; word-break: break-word; white-space: pre-line; line-height: 1.35;
     }
-    .actions {
-      display: flex;
-      gap: 0.65rem;
-      margin-top: 1.25rem;
-    }
+    .actions { display:flex; gap:.65rem; margin-top:1.4rem; }
     .btn {
-      flex: 1;
-      appearance: none;
-      border: 0;
-      border-radius: 999px;
-      padding: 0.95rem 1rem;
-      font: inherit;
-      font-weight: 700;
-      font-size: 0.92rem;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
+      flex:1; appearance:none; border:0; border-radius:999px;
+      padding:1rem 1rem; font:inherit; font-weight:700; font-size:.95rem;
+      cursor:pointer; text-decoration:none; text-align:center;
     }
-    .btn-primary { background: #0f172a; color: #fff; }
-    .btn-soft {
-      background: #fff;
-      color: #0f172a;
-      box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.1);
-    }
+    .btn-primary { background:#0f172a; color:#fff; }
+    .btn-soft { background:#fff; color:#0f172a; box-shadow: inset 0 0 0 1px rgba(15,23,42,.1); }
+    .hint { margin: 1rem 0 0; color: var(--muted); font-size: .8rem; }
     .brand {
-      margin-top: 1.5rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
+      margin-top: 1.6rem; font-size: .72rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted);
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <img class="avatar" src="ferruh-photo.jpg" alt="Ferruh Dede" width="124" height="124">
+    <img class="avatar" src="ferruh-photo.jpg" alt="Ferruh Dede" width="168" height="168">
     <h1>Ferruh Dede</h1>
-    <p class="title">Turkey IC</p>
-
+    <p class="org">Turkey IC</p>
     <div class="stack">
       <div class="row">
         <span class="k">Telefon</span>
@@ -133,23 +78,21 @@ Osmangazi Türkiye</span>
         <a class="v" href="http://www.turkeyic.com" target="_blank" rel="noopener">http://www.turkeyic.com</a>
       </div>
     </div>
-
     <div class="actions">
       <a class="btn btn-primary" id="save" href="ferruh-dede.vcf">Rehbere ekle</a>
       <a class="btn btn-soft" href="https://wa.me/905050901665">WhatsApp</a>
     </div>
+    <p class="hint">Rehbere ekle → fotoğraflı kişi kartı açılır</p>
     <p class="brand">Turkey IC</p>
   </main>
   <script>
-    // On mobile, nudge the contact file so the phone opens “Add contact”
     (function () {
-      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (!isMobile) return;
-      var link = document.getElementById("save");
-      // Soft auto-open once — user still sees the card above
+      var mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (!mobile) return;
+      // Open the vCard so Contacts preview includes PHOTO (text/x-vcard from Pages)
       setTimeout(function () {
-        try { link.click(); } catch (e) {}
-      }, 350);
+        window.location.href = "ferruh-dede.vcf";
+      }, 500);
     })();
   </script>
 </body>
