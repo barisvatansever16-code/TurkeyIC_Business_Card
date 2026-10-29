@@ -1,1 +1,1 @@
-VCARD direct + JPEG PHOTO modules=113
+https://raw.githubusercontent.com/barisvatansever16-code/TurkeyIC_Business_Card/main/contact/ferruh-dede.vcf
